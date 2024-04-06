@@ -29,7 +29,7 @@ public class ConcurrentBank {
         }
     }
 
-    public synchronized int getTotalBalance() {
+    public int getTotalBalance() {
         int totalBalance = 0;
         try {
             for (int i = 0; i < accounts.size(); i++) {

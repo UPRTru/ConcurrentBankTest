@@ -1,7 +1,9 @@
 public class BankAccount {
+    private int uniqueNumber;
     private int balance;
 
     public BankAccount(int balance) {
+        uniqueNumber = (int) (Math.random() * 1000);
         this.balance = balance;
     }
 
@@ -17,7 +19,7 @@ public class BankAccount {
         }
     }
 
-    public int getBalance() {
+    public synchronized int getBalance() {
         return balance;
     }
 }
